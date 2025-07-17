@@ -23,7 +23,7 @@ jobs:
     - name: Scan for vulnerabilities
       working-directory: ./docker-optimization-project
       run: |
-        docker scan --file Dockerfile --exclude-base docker-optim-demo
+        docker scan --exclude-base docker-optim-demo
         
     - name: Login to Docker Hub
       uses: docker/login-action@v3
