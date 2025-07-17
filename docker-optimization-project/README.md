@@ -1,6 +1,6 @@
 # 🐳 Docker Optimization Project - Production-Grade Containerization
 
-[![Docker Build & Security Scan](https://github.com/ChandanKolambe/devops-portfolio/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/ChandanKolambe/devops-portfolio/actions/workflows/ci.yaml)
+[![Docker Build & Security Scan](https://github.com/ChandanKolambe/devops-portfolio/actions/workflows/ci.yaml/badge.svg)](https://github.com/ChandanKolambe/devops-portfolio/actions/workflows/ci.yaml)
 [![Docker Image Size](https://img.shields.io/docker/image-size/chandankolambe/optimized-flask/latest?label=Optimized%20Image%20Size)](https://hub.docker.com/r/chandankolambe/optimized-flask)
 
 Demonstrates **industry best practices** for Docker optimization, security, and CI/CD automation.  
@@ -11,7 +11,8 @@ Demonstrates **industry best practices** for Docker optimization, security, and 
 |----------------------|-------------|-------------|-----------|
 | **Image Size**       | 1.15 GB     | 189 MB      | 85% ↓     |
 
-![Size Comparison]()
+![Size Comparison](<img width="1046" height="150" alt="image" src="https://github.com/user-attachments/assets/fd430605-6e04-4169-933e-c84dd26fff4f" />
+)
 
 ---
 
