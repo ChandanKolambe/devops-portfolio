@@ -4,6 +4,16 @@ on:
   push:
     paths:
       - 'docker-optimization-project/**'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+        - production
+        - staging
 
 jobs:
   build:
