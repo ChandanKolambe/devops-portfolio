@@ -1,6 +1,9 @@
 name: Docker Build & Security Scan
 
-on: [push]
+on:
+  push:
+    paths:
+      - 'docker-optimization-project/**'
 
 jobs:
   build:
@@ -14,9 +17,11 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Build Docker image
+      working-directory: ./docker-optimization-project
       run: docker build -t docker-optim-demo .
 
     - name: Scan for vulnerabilities
+      working-directory: ./docker-optimization-project
       run: |
         docker scan --file Dockerfile --exclude-base docker-optim-demo
         
@@ -27,6 +32,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push to Docker Hub
+      working-directory: ./docker-optimization-project
       run: |
         docker tag docker-optim-demo ${{ secrets.DOCKER_USERNAME }}/optimized-flask:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/optimized-flask:latest
