@@ -11,8 +11,7 @@ Demonstrates **industry best practices** for Docker optimization, security, and 
 |----------------------|-------------|-------------|-----------|
 | **Image Size**       | 1.15 GB     | 189 MB      | 85% ↓     |
 
-![Size Comparison](<img width="1046" height="150" alt="image" src="https://github.com/user-attachments/assets/fd430605-6e04-4169-933e-c84dd26fff4f" />
-)
+[![Size Comparison](https://i.postimg.cc/9QNHKLCz/Compare.png)](https://postimg.cc/ZW3QyF9h)
 
 ---
 
