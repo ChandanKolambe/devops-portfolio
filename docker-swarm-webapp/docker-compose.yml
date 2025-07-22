@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: docker-swarm-webapp:2.0
+    ports:
+      - "80:80"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      replicas: 3
+      placement:
+        preferences:
+          - spread: node.id
+      restart_policy:
+        condition: on-failure
+    networks:
+      - app-network
+
+  redis:
+    image: redis:latest
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - redis-data:/data
+    environment:
+      REDIS_PASSWORD_FILE: /run/secrets/redis_password
+    secrets:
+      - redis_password
+    networks:
+      - app-network
+
+volumes:
+  redis-data:
+
+secrets:
+  redis_password:
+    external: true
+
+networks:
+  app-network:
+    driver: overlay
