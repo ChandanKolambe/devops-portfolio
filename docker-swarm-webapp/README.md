@@ -79,6 +79,11 @@ docker swarm init --advertise-addr $YOUR_IP --listen-addr $YOUR_IP:2377
 # Build Nginx image
 docker build -t docker-swarm-webapp:1.0 .
 
+# Alternatively, you can pull my pre-built image directly from Docker Hub:
+# docker pull chandankolambe/docker-swarm-webapp:2.0 (or :latest).
+# You can find the repository here:
+# Docker Hub: https://hub.docker.com/repository/docker/chandankolambe/docker-swarm-webapp/
+
 # Create Redis password secret
 echo "mySecurePass123" | docker secret create redis_password -
 
