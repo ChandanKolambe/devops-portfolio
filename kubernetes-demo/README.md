@@ -15,7 +15,9 @@
 ---
 ## Screenshots
 ![Visitor Counter Demo](screenshots/webapp.png "Webapp Preview")
+
 ![First  run pods check](screenshots/beforescale.png "First run Pods Check")
+
 ![After scaling pods check](screenshots/afterscale.png "After scaling Pods Check")
 ---
 
